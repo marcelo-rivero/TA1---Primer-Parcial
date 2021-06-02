@@ -1,25 +1,19 @@
 <?php
 
-$usuario =  
-$contraseña = 
-$baseDatos = 
-
-$sql = "INSERT INTO Datos (nombre, apellido, edad, fechaNacimiento, email) VALUES ($_POST["nombre"], $_POST["apellido"], $_POST["edad"], $_POST["fechaNacimiento"], $_POST["email"])";
-
-
-
 if($_POST){
 
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $edad = $_POST["edad"];
+    $fechaNacimiento = $_POST["fechaNacimiento"];
+    $email = $_POST["email"];
     
-    $conexion = new mysqli('localhost', '$usuario', '$contraseña', '$baseDatos');
-
-
-
+    $host = 'localhost';
+    $usuario = 'root';
+    $pwd = '';
+    $BD = 'test';
     
-
-
-
-}
-
+     
+    $conexion = new mysqli('$host', '$usuario', '$pwd', '$BD');
 
 
