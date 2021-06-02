@@ -16,4 +16,16 @@ if($_POST){
      
     $conexion = new mysqli('$host', '$usuario', '$pwd', '$BD');
 
+    $sql = "INSERT INTO datos(nombre, apellido, edad, fechaNacimiento, email) VALUES ('$nombre', '$apellido', '$edad', '$fechaNacimiento', '$email')";
+    
+    <if($conexion->query($sql)){
+    
+    echo "Registro exitoso.";
+    
+    
+    }else echo "Fallo al registrar datos.";
+    
+    
+    }
+
 
